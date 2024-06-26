@@ -1,0 +1,153 @@
+PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
+SPOTIFY_EVENT="com.spotify.client.PlaybackStateChanged"
+
+##### Bar Appearance #####
+# Configuring the general appearance of the bar, these are only some of the
+# options available. For all options see:
+# https://felixkratz.github.io/SketchyBar/config/bar
+# If you are looking for other colors, see the color picker:
+# https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
+
+sketchybar --bar height=40                              
+sketchybar --bar margin=10               \
+                 corner_radius=10        \
+                 position=top             \
+                 color=0xff22242f        \
+                 border_color=0xffbd93f9 \
+                 border_width=2          \
+		 padding_left=10             \
+		 padding_right=20 	\
+                 y_offset=5              \
+                 sticky=off
+
+##### Changing Defaults #####
+# We now change some default values that are applied to all further items
+# For a full list of all available item properties see:
+# https://felixkratz.github.io/SketchyBar/config/items
+
+sketchybar --default label.font="SF Pro:Bold:14.0" \
+                     label.color=0xfff8f8f2                \
+                     icon.font="SF Pro:Bold:14.0"         \
+                     icon.color=0xfff8f8f2                \
+                     padding_left=5                        \
+                     padding_right=5                       \
+                     label.padding_left=4                  \
+                     label.padding_right=4                 \
+                     icon.padding_left=4                   \
+                     icon.padding_right=4
+
+##### Adding Right Items #####
+# In the same way as the left items we can add items to the right side.
+# Additional position (e.g. center) are available, see:
+# https://felixkratz.github.io/SketchyBar/config/items#adding-items-to-sketchybar
+
+# Some items refresh on a fixed cycle, e.g. the clock runs its script once
+# every 10s. Other items respond to events they subscribe to, e.g. the
+# volume.sh script is only executed once an actual change in system audio
+# volume is registered. More info about the event system can be found here:
+# https://felixkratz.github.io/SketchyBar/config/events
+
+sketchybar --add item clock right                              \
+           --set clock   update_freq=10                        \
+                         icon=􀐬                                \
+                         script="$PLUGIN_DIR/clock.sh"         \
+                                                               \
+	        --add item volume right                         \
+           --set volume  script="$PLUGIN_DIR/volume.sh"        \
+           --subscribe volume volume_change                    \
+								\
+           --add item battery right\
+           --set battery script="$PLUGIN_DIR/battery.sh"       \
+                         update_freq=120                       \
+           --subscribe battery system_woke power_source_change \
+                                                               \
+           --add item wifi right                            \
+           --set wifi    script="$PLUGIN_DIR/wifi.sh"          \
+                         icon=􀙇                              \
+           --subscribe wifi wifi_change                        \
+                                                               \
+								\
+           --add item apple left                       \
+           --set apple icon=􀣺                          \
+
+
+##### Adding Mission Control Space Indicators #####
+# Now we add some mission control spaces:
+# https://felixkratz.github.io/SketchyBar/config/components#space----associate-mission-control-spaces-with-an-item
+# to indicate active and available mission control spaces
+
+SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
+# SPACE_ICONS=("􀉉" "􀉚" "􀠎" "􁒙" "􀙫" "􀛹" "􀊱" "􀈖" "􀙣" "􀐞")
+
+for i in {0..9}; do
+	sid=$((i + 1))
+	sketchybar --add space space.$sid left \
+		--set space.$sid associated_space=$sid \
+		label.drawing=off \
+		icon.padding_left=10 \
+		icon.padding_right=10 \
+		background.padding_left=-5 \
+		background.padding_right=-5 \
+		script="$PLUGIN_DIR/space.sh"
+done
+	   
+
+ sketchybar --add item user left \
+            --set user \
+            label="$(whoami)" label.font.style="Bold" \
+            icon=󰀄 icon.color=0xffff79c6 \
+            \
+            --add item front_app center                             \
+            --set front_app       script="$PLUGIN_DIR/front_app.sh" \
+	    label.font.style="Bold" \
+                                  icon.drawing=off                  \
+            --subscribe front_app front_app_switched \
+           \
+           --add event spotify_update $SPOTIFY_EVENT \
+           \
+           --add item spotify left \
+           --set spotify script="$PLUGIN_DIR/spotify.sh" \
+           --subscribe spotify spotify_update mouse.entered.global mouse.exited.global \
+           \
+           --add item spotify.back left \
+           --set spotify.back script="$PLUGIN_DIR/spotify.sh" \
+                              drawing=off \
+                              icon=􀊊 \
+           --subscribe spotify.back mouse.clicked \
+           \
+           --add item spotify.playpause left \
+           --set spotify.playpause script="$PLUGIN_DIR/spotify.sh" \
+                                   drawing=off \
+           --subscribe spotify.playpause mouse.clicked \
+           \
+           --add item spotify.forward left \
+           --set spotify.forward script="$PLUGIN_DIR/spotify.sh" \
+                                 icon=􀊌 \
+                                 drawing=off \
+           --subscribe spotify.forward mouse.clicked \
+           #\
+           #--add item cpu right \
+           #--set cpu script="$PLUGIN_DIR/cpu.sh" \
+           #          update_freq=5 \
+           #          icon=􀧓 \
+sketchybar \
+	--add item front_app left \
+	--set front_app script="$PLUGIN_DIR/front_app.sh" \
+	icon.drawing=off \
+	background.height=26 \
+	background.padding_left=0 \
+	background.padding_right=10 \
+	label.color="0xfff8f8f2" \
+	label.padding_left=10 \
+	label.padding_right=10 \
+	associated_display=active \
+	--subscribe front_app front_app_switched
+
+            
+
+
+##### Finalizing Setup #####
+# The below command is only needed at the end of the initial configuration to
+# force all scripts to run the first time, it should never be run in an item script.
+
+sketchybar --update
