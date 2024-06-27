@@ -9,7 +9,7 @@ personal dotfiles.
 - Featured: Borders, pipes.sh, cmatrix.
 
 ![preview](https://github.com/strwbzzy/dotfiles/blob/main/.config/sketchybar/image_scr.png)
-## sketchybar dots
+## sketchybar
 ![screenshot of the original bar](.config/sketchybar/screenshot.png)
 based from [slano-ls' dotfiles configs](https://github.com/slano-ls/SketchyBar), with screenshot of the original bar above.
 ## how to
