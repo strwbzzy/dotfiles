@@ -1,12 +1,12 @@
 # hi there
 personal dotfiles.
 
-DE: Aqua
-WM: Amethyst
-Top bar: sketchybar
-Terminal: iTerm 2
-Shell: zsh (w/ oh-my-zsh and starship as prompt)
-Featured: Borders, pipes.sh, cmatrix.
+- DE: Aqua 
+- WM: Amethyst
+- Top bar: sketchybar
+- Terminal: iTerm 2
+- Shell: zsh (w/ oh-my-zsh and starship as prompt)
+- Featured: Borders, pipes.sh, cmatrix.
 
 ![preview](https://github.com/strwbzzy/dotfiles/blob/main/.config/sketchybar/image_scr.png)
 ## sketchybar dots
