@@ -1,5 +1,5 @@
 # SketchyBar dots
-![Screenshot of bar](./screenshot.png)
+![Screenshot of bar](.config/sketchybar/screenshot.png)
 Based from [slano-ls' dotfiles configs](https://github.com/slano-ls/SketchyBar), with screenshot of the original bar above.
 # Installation
 1. install [sketchybar](https://github.com/FelixKratz/SketchyBar)
