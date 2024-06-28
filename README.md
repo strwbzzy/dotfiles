@@ -1,5 +1,5 @@
 # hi there
-![preview](https://github.com/strwbzzy/dotfiles/blob/main/.config/sketchybar/image_scr.png)
+![preview](https://github.com/strwbzzy/dotfiles/blob/aa422a3cca67c4f4f94df4f357340cde10200106/image/img_scr.png)
 
 - DE: Aqua 
 - WM: Amethyst
