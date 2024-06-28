@@ -1,10 +1,3 @@
-#  ___
-# |_ _| |_ __ _ _   _   
-#  | || __/ _` | | | |  github: https://github.com/itaysharir
-#  | || || (_| | |_| |  reddit: u/visible-pop-2576
-# |___|\__\__,_|\__, |  dotfiles: https://github.com/itaysharir/Dotfiles
-#               |___/  
-
 ZSH_THEME="dracula/dracula"
 
 ### Export ###
