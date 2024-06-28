@@ -2,11 +2,10 @@
 
 options=(
 	style=round
-	width=6
+	width=2
 	hidpi=on
 	active_color=0xffbd93f9
 	inactive_color=0xff414550
 )
 
 borders "${options[@]}"
-borders order=above # has to do this or else the accent colour will appear above the border; you can see the fix here: https://github.com/FelixKratz/JankyBorders/issues/37#issuecomment-1871262622
