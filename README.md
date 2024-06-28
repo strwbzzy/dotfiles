@@ -15,5 +15,5 @@ based from [slano-ls' dotfiles configs](https://github.com/slano-ls/SketchyBar),
 2. install [sketchybar](https://github.com/FelixKratz/SketchyBar)
 3. git clone my configuration
 ```bash
-git clone https://github.com/strwbzzy/dotfiles ~/.config/sketchybar/
+git clone https://github.com/strwbzzy/dotfiles
 ```
