@@ -1,5 +1,5 @@
 # hi there
-![preview](https://github.com/strwbzzy/dotfiles/blob/3bf40cc43892a7dd7b4032c8bbe336f209602a25/image/Screenshot%202024-06-29%20at%2001.02.12.png)
+![preview](https://github.com/strwbzzy/dotfiles/blob/6e283a9eaedac01f8a6116ebe6d4c0bda90ab0a0/image/Screenshot%202024-06-29%20at%2001.21.48.png)
 
 - DE: Aqua 
 - WM: Amethyst
