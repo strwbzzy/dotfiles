@@ -6,7 +6,6 @@
 - Top bar: sketchybar
 - Terminal: iTerm 2
 - Shell: zsh (w/ oh-my-zsh and starship as prompt)
-- Featured: Borders, pipes.sh, cmatrix.
 ## sketchybar
 ![screenshot of the original bar](.config/sketchybar/screenshot.png)
 based from [slano-ls' dotfiles configs](https://github.com/slano-ls/SketchyBar), with screenshot of the original bar above.
