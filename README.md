@@ -1,11 +1,5 @@
 # hi there
 ![preview](https://github.com/strwbzzy/dotfiles/blob/f4438a16cc80019e5d646fa0cd1d117695d9d052/image/preview.png)
-
-- DE: Aqua 
-- WM: Amethyst
-- Top bar: sketchybar
-- Terminal: iTerm 2
-- Shell: zsh (w/ oh-my-zsh and starship as prompt)
 ## sketchybar
 ![screenshot of the original bar](.config/sketchybar/screenshot.png)
 based from [slano-ls' dotfiles configs](https://github.com/slano-ls/SketchyBar), with screenshot of the original bar above.
