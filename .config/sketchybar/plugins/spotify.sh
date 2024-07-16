@@ -29,7 +29,7 @@ mouse_clicked() {
 }
 
 set_spotify() {
-  export SPOTIFY="$(osascript -e 'tell application "Spotify" to get name of current track') - $(osascript -e 'tell application "Spotify" to get album of current track')"
+  export SPOTIFY="$(osascript -e 'tell application "Spotify" to get name of current track') - $(osascript -e 'tell application "Spotify" to get artist of current track')"
   if (( ${#SPOTIFY} < 31 )); then
     sketchybar --set spotify icon=􀑪 \
                      label="${SPOTIFY}" \
