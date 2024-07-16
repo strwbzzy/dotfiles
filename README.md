@@ -1,5 +1,5 @@
 # hi there
-![preview](hhttps://github.com/strwbzzy/dotfiles/blob/caf62dca415ee6a7b732eb3887193687a6ca8bdc/image/preview.png)
+![preview](https://github.com/strwbzzy/dotfiles/blob/caf62dca415ee6a7b732eb3887193687a6ca8bdc/image/preview.png)
 ## sketchybar
 ![screenshot of the original bar](.config/sketchybar/screenshot.png)
 based on [slano-ls' dotfiles configs](https://github.com/slano-ls/SketchyBar), with screenshot of the original bar above.
