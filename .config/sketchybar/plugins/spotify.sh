@@ -36,7 +36,8 @@ set_spotify() {
                --set spotify.playpause icon=􀊘
   else
     sketchybar --set spotify icon=􀑪 \
-                     label="$(osascript -e 'tell application "Spotify" to get name of current track')" \
+                     label="$(osascript -e 'tell application "Spotify" to get name of current track') - $(osascript -e 'tell application "Spotify" to get artist of current track')" \
+                     scroll_texts=on \
                --set spotify.playpause icon=􀊘
   fi
 }
