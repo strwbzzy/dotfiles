@@ -3,7 +3,7 @@
 - bar: [sketchybar](https://github.com/FelixKratz/SketchyBar)
 - wm: [amethyst](https://ianyh.com/amethyst/)
 - terminal: [iterm2](https://iterm2.com/) ([zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) x [starship](https://starship.rs/))
-- other: [jankyborders](https://github.com/FelixKratz/JankyBorders)
+- other: [jankyborders](https://github.com/FelixKratz/JankyBorders), [cmatrix](https://github.com/abishekvashok/cmatrix)
 ## sketchybar
 ![original bar](.config/sketchybar/screenshot.png)
 based on [slano-ls' dotfiles](https://github.com/slano-ls/SketchyBar), with screenshot of the original bar above.
