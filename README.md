@@ -8,7 +8,7 @@
 ![original bar](.config/sketchybar/screenshot.png)
 based on [slano-ls' dotfiles](https://github.com/slano-ls/SketchyBar), with screenshot of the original bar above.
 ### how to
-1. get [sketchybar](https://github.com/FelixKratz/SketchyBar) via [homebrew](https://brew.sh) 
+1. get [sketchybar](https://github.com/FelixKratz/SketchyBar)
 2. clone my configuration
 ```bash
 git clone https://github.com/strwbzzy/dotfiles ~/.config/sketchybar/
