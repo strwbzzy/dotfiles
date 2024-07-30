@@ -9,4 +9,7 @@ options=(
 )
 
 borders "${options[@]}"
-borders order=above # has to do this or else the border wont work; read more here: https://github.com/FelixKratz/JankyBorders/issues/37#issuecomment-1871262622
+borders order=above 
+# has to do this or else the border 
+# wont work; read more here: 
+# https://github.com/FelixKratz/JankyBorders/issues/37#issuecomment-1871262622
