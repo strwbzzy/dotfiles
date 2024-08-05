@@ -6,10 +6,15 @@
 - other: [jankyborders](https://github.com/FelixKratz/JankyBorders), [cmatrix](https://github.com/abishekvashok/cmatrix)
 ## sketchybar
 ![original bar](.config/sketchybar/screenshot.png)
-based on [slano-ls' sketchybar dots](https://github.com/slano-ls/SketchyBar), with screenshot of the original bar above.
+based on [slano-ls' dots](https://github.com/slano-ls/SketchyBar), with screenshot of the original bar above.
 ### how to
 1. get [sketchybar](https://github.com/FelixKratz/SketchyBar)
 2. clone my configuration
 ```bash
-git clone https://github.com/strwbzzy/dotfiles ~/.config/sketchybar/
+git clone https://github.com/strwbzzy/dotfiles
+```
+3. move files 
+```bash
+cd dotfiles/.config 
+mv .config/sketchybar ~/.config/
 ```
