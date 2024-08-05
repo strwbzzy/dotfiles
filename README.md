@@ -8,12 +8,20 @@
 ![original bar](.config/sketchybar/screenshot.png)
 based on [slano-ls' dots](https://github.com/slano-ls/SketchyBar), with screenshot of the original bar above.
 ### how to
-1. get [sketchybar](https://github.com/FelixKratz/SketchyBar)
-2. clone my configuration
+1. sketchybar
+```bash
+brew tap FelixKratz/formulae
+brew install sketchybar
+```
+2. font
+```bash
+brew install --cask font-sf-pro
+```
+3. clone my config
 ```bash
 git clone https://github.com/strwbzzy/dotfiles
 ```
-3. move files 
+4. move files 
 ```bash
 cd dotfiles/.config 
 mv .config/sketchybar ~/.config/
